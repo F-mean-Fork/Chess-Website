@@ -1,0 +1,125 @@
+@import "..\\..\\common\\extends.scss";
+@import "..\\..\\common\\mixins.scss";
+
+.footer_item{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 43px;
+}
+
+.footer_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-evenly;
+    align-items: flex-start;
+}
+
+.footer_logo_pic{
+    width: 161px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.footer_logo_info{
+    font-weight: 400;
+    line-height: 20.3px;
+    text-align: left;
+    color: rgba(159, 159, 159, 1);
+}
+
+.footer_logo_info_desc1{
+    width: 244px;
+    margin-bottom: 40px;
+}
+
+.footer_logo_info_desc2{
+    width: 290px;
+}
+
+.footer_nav{
+    margin-left: 83px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.footer_menu-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 18px;
+}
+
+.footer_menu-link{
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.footer_menu-item:not(:last-child){
+    margin-bottom: 14px;
+}
+
+.footer_menu_contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_menu_contacts-tel,
+.footer_menu_contacts-mail{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.1s;
+}
+
+.footer_menu_contacts-wt{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.footer_menu_contacts-address{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+
+.footer_menu_contacts-tel:hover,
+.footer_menu_contacts-mail:hover,
+.footer_menu_contacts-tel:active,
+.footer_menu_contacts-mail:active,
+.footer_menu_contacts-tel:focus,
+.footer_menu_contacts-mail:focus{
+    transform: scale(1.02);
+}
+
+.footer_menu_contacts-icon{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_icon:not(:last-child){
+    margin-right: 12px;
+}
+
+.footer_icon{
+    transition: transform 0.1s ease-in-out;
+}
+
+.footer_icon:hover,
+.footer_icon:active,
+.footer_icon:focus{
+    transform: scale(1.1);
+}

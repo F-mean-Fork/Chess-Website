@@ -1,0 +1,33 @@
+.wrapper{
+
+    &__mainWrap{
+        margin: 0 72px;
+
+
+        &-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 64px;
+
+            &-desc{
+                font-family: Merriweather;
+                font-size: 36px;
+                width: 764px;
+                line-height: 48.6px;
+                text-transform: uppercase;
+
+                h1{
+                    font-weight: 400;
+                    color: rgba(49, 49, 49, 1);
+                }
+                
+                a{
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: rgba(245, 73, 50, 1);
+                }
+            }
+        }
+    }
+}
