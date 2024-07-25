@@ -46,7 +46,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(184, 115, 51, 0.25);
+            background-color: rgba(233, 222, 212, 0.70);
             z-index: 1;
         }
 
@@ -56,6 +56,7 @@
             top: 124px;
             width: 542px;
             color: rgba(49, 49, 49, 1);
+            z-index: 999;
 
             &-title{
                 font-family:  Merriweather; 
@@ -76,7 +77,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
+                
                 &-link{
                     width: 263px;
                     height: 72px;
@@ -90,7 +91,7 @@
                     text-align: center;
                     transition: transform 0.2s ease-in-out;
                     cursor: pointer;
-                    z-index: 3;
+
                 }
                 
                 &-link:first-child{
@@ -120,14 +121,15 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            z-index: 3;
+            z-index: 5;
         }
         
         &-ellipse{
             position: absolute;
             top: 0;
             right: 33px;
-            z-index: 2;
+            z-index: 3;
+            opacity: 66%;
         }
         
         &-ellipseWords{
@@ -141,28 +143,28 @@
             position: absolute;
             bottom: 0;
             right: 334.28px;
-            z-index: 3;
+            z-index: 5;
         }
 
         &-pawn{
             position: absolute;
             bottom: 19.28px;
             right: 44.55px;
-            z-index: 3;
+            z-index: 5;
         }
         
         &-king1{
             position: absolute;
             bottom: 164.31px;
             right: 506.92px;
-            z-index: 2;
+            z-index: 4;
         }
         
         &-king2{
             position: absolute;
             bottom: 269.54px;
             right: 159.04px;
-            z-index: 2;
+            z-index: 4;
         }
         
         &__runningText {
