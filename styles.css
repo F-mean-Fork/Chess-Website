@@ -1,0 +1,246 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.wrapper{
+    max-width: 1366px;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+
+.mainPicContainer{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.copperLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(184, 115, 51, 0.22);
+    z-index: 1;
+}
+
+.headerLogo-link{
+    text-decoration: none;
+    z-index: 3;
+}
+
+.headerLogo{
+    position: absolute;
+    left: 72px;
+    top: 26px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.35px;
+    height: 36px;
+    z-index: 3;
+}
+
+.logoThumb{
+    height: 100%;
+    width: auto;
+}
+
+.headerLogo-name{
+    color: rgba(89, 86, 83, 1);
+    font-family: Golos Text;
+    font-size: 16.65px;
+    font-weight: 700;
+    line-height: 17.98px;
+    letter-spacing: 0.01em;
+    width: 147px;
+}
+
+.headerInfo{
+    position: absolute;
+    left: 72px;
+    top: 124px;
+    width: 542px;
+    color: rgba(49, 49, 49, 1);
+
+}
+
+.headerTitle{
+    font-family:  Merriweather; 
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 66px;
+    margin-bottom: 24px;
+}
+
+.headerSubtitle{
+    font-family: Golos Text;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLink{
+    width: 263px;
+    height: 72px;
+    border-radius: 66px;
+    text-decoration: none;
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    padding: 15px 49px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.headerLink:first-child{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(31, 31, 31, 1);
+}
+
+.headerLink:first-child:hover{
+    color: rgba(31, 31, 31, 1);
+    background: rgba(251, 206, 81, 1);
+
+}
+
+.headerLink:last-child{
+    border: 2px solid rgba(31, 31, 31, 1);
+    color: rgba(31, 31, 31, 1);
+}
+
+.headerLink:last-child:hover{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(31, 31, 31, 1);
+}
+
+/* Pictures Styling Start*/
+
+.mainPic{
+    width: 100%;
+}
+
+
+.cityPic{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.ellipsPic{
+    position: absolute;
+    top: 0;
+    right: 33px;
+    z-index: 2;
+}
+
+.ellipseWords{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+  
+.circle-text span {
+    transform: rotate(-90deg); /* Поворот текста */
+    display: block; /* Отображение текста как блока */
+}
+
+.chessField{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.runningText {
+    background: rgba(245, 73, 50, 1);
+    width: 100%;
+    height: 60px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+ 
+
+.runningText div{
+    display: flex;
+    width: 200%;
+    padding: 18px 0;
+    animation: runningText 20s linear infinite;
+}
+
+.text{
+    white-space: nowrap;
+    font-family: Merriweather;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24.2px;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 12px;
+}
+
+.text::before {
+    content: "\2022";
+    margin-right: 12px;
+}
+@keyframes runningText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+/* Header Styles end */
+
+/* Main Info Styles Start*/
+
+.mainInfo-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.mainInfo-title-desc{
+    font-family: Merriweather;
+    font-size: 36px;
+    margin-right: 72px;
+    width: 764px;
+    line-height: 48.6px;
+    text-transform: uppercase;
+}
+
+.mainInfo-title-desc h1{
+    font-weight: 400;
+    color: rgba(49, 49, 49, 1);
+}
+
+.mainInfo-title-desc a{
+    font-weight: 700;
+    text-decoration: none;
+    color: rgba(245, 73, 50, 1);
+}
