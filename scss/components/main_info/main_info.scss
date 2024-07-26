@@ -1,8 +1,7 @@
 .wrapper{
 
     &__mainWrap{
-        margin: 0 72px;
-
+        margin: 0 72px 64px 72px;
 
         &-title{
             display: flex;
@@ -16,11 +15,6 @@
                 width: 764px;
                 line-height: 48.6px;
                 text-transform: uppercase;
-
-                h1{
-                    font-weight: 400;
-                    color: rgba(49, 49, 49, 1);
-                }
                 
                 a{
                     font-weight: 700;
@@ -28,6 +22,195 @@
                     color: rgba(245, 73, 50, 1);
                 }
             }
+        }
+
+        &-gameWrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-thumb{
+                margin-left: -45px;
+            }
+
+            &-info{
+                width: 704px;
+
+                &__title{
+                    font-family: Merriweather;
+                    font-size: 36px;
+                    line-height: 48.6px;
+                    text-align: left;
+                    text-transform: uppercase;
+
+                    a{
+                        color: rgba(245, 73, 50, 1);
+                        text-decoration: none;
+                        font-weight: 700;
+
+                    }
+                }
+
+                &__table{
+                    width: 100%;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: left;
+                    margin: 60px 0 48px 0;
+                    display: table;
+                    border-collapse: collapse;
+
+                    &-row{
+                        display: table-row;
+                    }
+
+                    &-row:first-child{
+                        border-top: 0;
+                    }
+
+                    &-row:last-child{
+                        border-bottom: 0;
+                    }
+
+                    &-cell1, &-cell2{
+                        display: table-cell;
+                        border: 2px solid rgba(208, 208, 208, 1);
+                    }
+
+                    &-cell1{
+                        width: 306px;
+                        color: rgb(84, 74, 74);
+                        border-left: 0;
+                    }
+
+                    &-cell2{
+                        border-right: 0;
+                        font-weight: 600;
+                    }
+
+                    &-row:not(:first-child) &-cell1 {
+                        padding: 16px 16px 16px 0;
+
+                    }
+
+                    &-row:not(:first-child) &-cell2 {
+                        padding: 16px;
+                    }
+
+                    &-row:first-child &-cell1 {
+                        border-top: 0;
+                        padding: 0 16px 16px 0;
+
+                    }
+
+                    &-row:first-child &-cell2 {
+                        border-top: 0;
+                        padding: 0 16px 16px 16px;;
+                    }
+
+                    &-row:last-child &-cell1 {
+                        border-bottom: 0;
+                        padding: 16px 16px 0 0;
+
+                    }
+
+                    &-row:last-child &-cell2 {
+                        border-bottom: 0;
+                        padding: 16px 16px 0 16px;;
+                    }
+
+
+
+                } 
+            }
+            &-info > a{
+                text-decoration: none;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: left;
+                color: rgba(48, 87, 162, 1);
+            }
+            
+        }
+
+        &-steps{
+            margin-top: 200px;
+            position: relative;
+            
+            &-title{
+                position: relative;
+                
+                &-text{
+                    font-size: 54px;
+                    line-height: 64.8px;
+                    width: 800px;
+                    margin-bottom: 54px;
+                }
+                &-link{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 301px;
+                    text-decoration: none;
+                    color: rgba(48, 87, 162, 1);
+                    line-height: 24px;
+                    text-align: left;
+
+                }
+            }
+
+
+            &__grid{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 20px;
+
+                &-item{
+                    display: flex;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: left;
+                    background: url('img\\CooperPaper-mix.png');
+                }
+
+                &-item span{
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    font-weight: 600;         
+                    padding: 6px 12px 12px 12px;      
+                    margin-right: 16px;
+                }
+
+
+                &-item:not(:nth-child(3)),
+                &-item:not(:last-child){
+                    padding: 20px;
+                }
+
+                &-item:nth-child(3){
+                    padding: 20px 20px 80px 20px;
+                    grid-column-start: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+
+                &-item:last-child{
+                    padding: 20px 290px 20px 20px;
+                    grid-row-start: 3;
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                }
+            }
+
+            &-thumb{
+                position: absolute;
+                bottom: 0;
+                right: -64px;
+            }
+            
         }
     }
 }

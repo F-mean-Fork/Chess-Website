@@ -1,86 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <section class="header">
-        <div class="wrapper">
-            <div class="wrapper-container">
-                <div class="wrapper-container__logo">
-                    <a href="#" class="wrapper-container__logo-link">
-                        <div class="wrapper-container__logo-pic">
-                            <img src="img\\chess-horse-icon.svg" alt="Chess Horse" class="wrapper-container__logo-pic-thumb">
-                            <img src="img\\chess-horse-icon.svg" alt="Chess Horse" class="wrapper-container__logo-pic-thumb">
-                            <img src="img\\chess-horse-icon.svg" alt="Chess Horse" class="wrapper-container__logo-pic-thumb">
-                            <img src="img\\chess-horse-icon.svg" alt="Chess Horse" class="wrapper-container__logo-pic-thumb">
-                        </div>
-                    </a>
-                    <div class="wrapper-container__logo-name">
-                        Клуб<br>четырех коней
-                    </div>
-                </div>
-                <div class="wrapper-container__info">
-                    <div class="wrapper-container__info-title">
-                        <div class="wrapper-container__info-title-text">
-                            Превратите<br>уездный город<br><center>в столицу<br>земного шара</center>
-                        </div>
-                    </div>
-                    <div class="wrapper-container__info-subtitle">
-                        <div class="wrapper-container__info-subtitle-text">
-                            Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
-                        </div>
-                    </div>
-                    <div class="wrapper-container__info-form">
-                        <a href="#" class="wrapper-container__info-form-link">Поддержать шахматную мысль</a>
-                        <a href="#" class="wrapper-container__info-form-link">Подробнее о турнире</a>
-                    </div>
-                </div>
-                <img src="img\\Ellipse.png" alt="Ellips" class="wrapper-container-ellipse">
-                <img src="img\\Ellipse_words.png" alt="Ellipse Words" class="wrapper-container-ellipseWords">
-                <div class="wrapper-container-copperLayer"></div>
-                <img src="img\\header-pic.png" alt="Cooper Union Stamp Paper" class="wrapper-container-mainPic"> 
-                <img src="img\\header-pic-city.png" alt="City" class="wrapper-container-city">
-                <img src="img\\chess1.png" alt="king" class="wrapper-container-king1">
-                <img src="img\\chess2.png" alt="king" class="wrapper-container-king2">
-                <img src="img\\chess3.png" alt="pawn" class="wrapper-container-pawn">
-                <img src="img\\chess4.png" alt="knight" class="wrapper-container-knight">
+      <div class="wrapper">
+        <div class="wrapper-container">
+          <div class="wrapper-container__logo">
+            <a href="#" class="wrapper-container__logo-link">
+              <div class="wrapper-container__logo-pic">
+                <img
+                  src="img\\chess-horse-icon.svg"
+                  alt="Chess Horse"
+                  class="wrapper-container__logo-pic-thumb"
+                />
+                <img
+                  src="img\\chess-horse-icon.svg"
+                  alt="Chess Horse"
+                  class="wrapper-container__logo-pic-thumb"
+                />
+                <img
+                  src="img\\chess-horse-icon.svg"
+                  alt="Chess Horse"
+                  class="wrapper-container__logo-pic-thumb"
+                />
+                <img
+                  src="img\\chess-horse-icon.svg"
+                  alt="Chess Horse"
+                  class="wrapper-container__logo-pic-thumb"
+                />
+              </div>
+            </a>
+            <div class="wrapper-container__logo-name">
+              Клуб<br />четырех коней
             </div>
-            <div class="wrapper-container__runningText">
-                <div class="wrapper-container__runningText-container">
-                    <h1 class="wrapper-container__runningText-container-text">Дело помощи утопающим — дело рук самих утопающих!</h1>
-                    <h1 class="wrapper-container__runningText-container-text">Шахматы двигают вперёд не только культуру, но и экономику!</h1>
-                    <h1 class="wrapper-container__runningText-container-text">Лед тронулся, господа присяжные заседатели</h1>                </div>
+          </div>
+          <div class="wrapper-container__info">
+            <div class="wrapper-container__info-title">
+              <div class="wrapper-container__info-title-text">
+                Превратите<br />уездный город<br />
+                <center>в столицу<br />земного шара</center>
+              </div>
             </div>
+            <div class="wrapper-container__info-subtitle">
+              <div class="wrapper-container__info-subtitle-text">
+                Оплатите взнос на телеграммы для организации Международного
+                васюкинского турнира по шахматам
+              </div>
+            </div>
+            <div class="wrapper-container__info-form">
+              <a href="#" class="wrapper-container__info-form-link"
+                >Поддержать шахматную мысль</a
+              >
+              <a href="#" class="wrapper-container__info-form-link"
+                >Подробнее о турнире</a
+              >
+            </div>
+          </div>
+          <img
+            src="img\\Ellipse.png"
+            alt="Ellips"
+            class="wrapper-container-ellipse"
+          />
+          <img
+            src="img\\Ellipse_words.png"
+            alt="Ellipse Words"
+            class="wrapper-container-ellipseWords"
+          />
+          <div class="wrapper-container-copperLayer"></div>
+          <img
+            src="img\\header-pic.png"
+            alt="Cooper Union Stamp Paper"
+            class="wrapper-container-mainPic"
+          />
+          <img
+            src="img\\header-pic-city.png"
+            alt="City"
+            class="wrapper-container-city"
+          />
+          <img
+            src="img\\chess1.png"
+            alt="king"
+            class="wrapper-container-king1"
+          />
+          <img
+            src="img\\chess2.png"
+            alt="king"
+            class="wrapper-container-king2"
+          />
+          <img
+            src="img\\chess3.png"
+            alt="pawn"
+            class="wrapper-container-pawn"
+          />
+          <img
+            src="img\\chess4.png"
+            alt="knight"
+            class="wrapper-container-knight"
+          />
         </div>
+        <div class="wrapper-container__runningText">
+          <div class="wrapper-container__runningText-container">
+            <h1 class="wrapper-container__runningText-container-text">
+              Дело помощи утопающим — дело рук самих утопающих!
+            </h1>
+            <h1 class="wrapper-container__runningText-container-text">
+              Шахматы двигают вперёд не только культуру, но и экономику!
+            </h1>
+            <h1 class="wrapper-container__runningText-container-text">
+              Лед тронулся, господа присяжные заседатели
+            </h1>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="mainInfo">
-        <div class="wrapper">
-            <div class="wrapper__mainWrap">
-                <div class="wrapper__mainWrap-title">
-                    <div class="wrapper__mainWrap-title-desc">
-                        <h1>Чтобы поддержать<br>Международный васюкинский<br>турнир посетите лекцию на тему:</h1>
-                        <a href="#">«Плодотворная дебютная идея»</a>
-                    </div>
-                    <img src="img\\chess-tournament.png" alt="Chess Tournament">
-                </div>
+      <div class="wrapper">
+        <div class="wrapper__mainWrap">
+          <div class="wrapper__mainWrap-title">
+            <div class="wrapper__mainWrap-title-desc">
+              <h1>
+                Чтобы поддержать<br />Международный васюкинский<br />турнир
+                посетите лекцию на тему:
+              </h1>
+              <a href="#">«Плодотворная дебютная идея»</a>
             </div>
+            <img src="img\\chess-tournament.png" alt="Chess Tournament" />
+          </div>
+          <div class="wrapper__mainWrap-gameWrap">
+            <img
+              src="img\\human-pic.png"
+              alt="Grandmaster O. Bender"
+              class="wrapper__mainWrap-gameWrap-thumb"
+            />
+            <div class="wrapper__mainWrap-gameWrap-info">
+              <div class="wrapper__mainWrap-gameWrap-info__title">
+                <h1>
+                  и Сеанс<a href="#">
+                    одновременной игры<br />в шахматы на 160 досках </a
+                  >гроссмейстера О. Бендера
+                </h1>
+              </div>
+              <div class="wrapper__mainWrap-gameWrap-info__table">
+                <div class="wrapper__mainWrap-gameWrap-info__table-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                    Место проведения:
+                  </div>
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                    Клуб «Картонажник»
+                  </div>
+                </div>
+                <div class="wrapper__mainWrap-gameWrap-info__table-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                    Дата и время мероприятия:
+                  </div>
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                    22 июня 1927 г. в 18:00
+                  </div>
+                </div>
+                <div class="wrapper__mainWrap-gameWrap-info__table-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                    Стоимость входных билетов:
+                  </div>
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                    20 коп.
+                  </div>
+                </div>
+                <div class="wrapper__mainWrap-gameWrap-info__table-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                    Плата за игру:
+                  </div>
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                    50 коп.
+                  </div>
+                </div>
+                <div class="wrapper__mainWrap-gameWrap-info__table-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                    Взнос на телеграммы:
+                  </div>
+                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                    <s
+                      style="
+                        text-decoration: line-through;
+                        text-decoration-color: red;
+                        text-decoration-thickness: 2px;
+                      "
+                      >100 руб.</s
+                    >
+                    21 руб. 16 коп.
+                  </div>
+                </div>
+              </div>
+              <a href="#"
+                >По всем вопросам обращаться в администрацию к К. Михельсону</a
+              >
+            </div>
+          </div>
+          <div class="wrapper__mainWrap-steps">
+            <div class="wrapper__mainWrap-steps-title">
+                <h1 class="wrapper__mainWrap-steps-title-text">
+                    Этапы преображения Васюков
+                    </h1>
+                    <a href="#" class="wrapper__mainWrap-steps-title-link">Будущие источники<br>обогащения васюкинцев</a>
+            </div>
+            <div class="wrapper__mainWrap-steps__grid">
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">1</span>
+                Строительство железнодорожной магистрали Москва-Васюки
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">2</span>
+                Открытие фешенебельной гостиницы «Проходная пешка» и других
+                небоскрёбов
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">3</span>
+                Поднятие сельского хозяйства в радиусе на тысячу километров:
+                производство овощей, фруктов, икры, шоколадных конфет
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">4</span>
+                Строительство дворца для турнира
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">5</span>
+                Размещение гаражей для гостевого автотранспорта
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">6</span>
+                Постройка сверхмощной радиостанции для передачи всему миру
+                сенсационных результатов
+              </div>
+              <div class="wrapper__mainWrap-steps__grid-item">
+                <span class="step-number">7</span>
+                Создание аэропорта «Большие Васюки»<br />с регулярным
+                отправлением почтовых самолётов и дирижаблей во все концы света,
+                включая Лос-Анжелос и Мельбурн
+              </div>
+            </div>
+            <img
+              src="img\\plane.png"
+              alt="Plane"
+              class="wrapper__mainWrap-steps-thumb"
+            />
+          </div>
         </div>
-
+      </div>
     </section>
-
-
-
-</body>
+  </body>
 </html>

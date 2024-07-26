@@ -351,7 +351,17 @@ html {
 }
 
 body {
+  font-family: Golos Text;
   font-weight: 400;
+  font-size: 20px;
+  color: rgb(49, 49, 49);
+}
+
+h1 {
+  font-family: Merriweather;
+  font-weight: 400;
+  color: rgb(49, 49, 49);
+  text-transform: uppercase;
 }
 
 .wrapper {
@@ -387,7 +397,6 @@ body {
 }
 .wrapper-container__logo-name {
   color: rgb(89, 86, 83);
-  font-family: Golos Text;
   font-size: 16.65px;
   font-weight: 700;
   line-height: 17.98px;
@@ -418,7 +427,6 @@ body {
   margin-bottom: 24px;
 }
 .wrapper-container__info-subtitle {
-  font-family: Golos Text;
   font-size: 18px;
   line-height: 23.4px;
   text-align: center;
@@ -434,7 +442,6 @@ body {
   height: 72px;
   border-radius: 66px;
   text-decoration: none;
-  font-family: Golos Text;
   font-size: 16px;
   font-weight: 500;
   line-height: 20.8px;
@@ -511,7 +518,7 @@ body {
 }
 .wrapper-container__runningText-container {
   display: flex;
-  width: 200%;
+  width: 100%;
   padding: 18px 0;
   animation: runningText 20s linear infinite;
 }
@@ -538,7 +545,7 @@ body {
 }
 
 .wrapper__mainWrap {
-  margin: 0 72px;
+  margin: 0 72px 64px 72px;
 }
 .wrapper__mainWrap-title {
   display: flex;
@@ -553,14 +560,158 @@ body {
   line-height: 48.6px;
   text-transform: uppercase;
 }
-.wrapper__mainWrap-title-desc h1 {
-  font-weight: 400;
-  color: rgb(49, 49, 49);
-}
 .wrapper__mainWrap-title-desc a {
   font-weight: 700;
   text-decoration: none;
   color: rgb(245, 73, 50);
+}
+.wrapper__mainWrap-gameWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper__mainWrap-gameWrap-thumb {
+  margin-left: -45px;
+}
+.wrapper__mainWrap-gameWrap-info {
+  width: 704px;
+}
+.wrapper__mainWrap-gameWrap-info__title {
+  font-family: Merriweather;
+  font-size: 36px;
+  line-height: 48.6px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.wrapper__mainWrap-gameWrap-info__title a {
+  color: rgb(245, 73, 50);
+  text-decoration: none;
+  font-weight: 700;
+}
+.wrapper__mainWrap-gameWrap-info__table {
+  width: 100%;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  margin: 60px 0 48px 0;
+  display: table;
+  border-collapse: collapse;
+}
+.wrapper__mainWrap-gameWrap-info__table-row {
+  display: table-row;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:first-child {
+  border-top: 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:last-child {
+  border-bottom: 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-cell1, .wrapper__mainWrap-gameWrap-info__table-cell2 {
+  display: table-cell;
+  border: 2px solid rgb(208, 208, 208);
+}
+.wrapper__mainWrap-gameWrap-info__table-cell1 {
+  width: 306px;
+  color: rgb(84, 74, 74);
+  border-left: 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-cell2 {
+  border-right: 0;
+  font-weight: 600;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:not(:first-child) .wrapper__mainWrap-gameWrap-info__table-cell1 {
+  padding: 16px 16px 16px 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:not(:first-child) .wrapper__mainWrap-gameWrap-info__table-cell2 {
+  padding: 16px;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:first-child .wrapper__mainWrap-gameWrap-info__table-cell1 {
+  border-top: 0;
+  padding: 0 16px 16px 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:first-child .wrapper__mainWrap-gameWrap-info__table-cell2 {
+  border-top: 0;
+  padding: 0 16px 16px 16px;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:last-child .wrapper__mainWrap-gameWrap-info__table-cell1 {
+  border-bottom: 0;
+  padding: 16px 16px 0 0;
+}
+.wrapper__mainWrap-gameWrap-info__table-row:last-child .wrapper__mainWrap-gameWrap-info__table-cell2 {
+  border-bottom: 0;
+  padding: 16px 16px 0 16px;
+}
+.wrapper__mainWrap-gameWrap-info > a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  color: rgb(48, 87, 162);
+}
+.wrapper__mainWrap-steps {
+  margin-top: 200px;
+  position: relative;
+}
+.wrapper__mainWrap-steps-title {
+  position: relative;
+}
+.wrapper__mainWrap-steps-title-text {
+  font-size: 54px;
+  line-height: 64.8px;
+  width: 800px;
+  margin-bottom: 54px;
+}
+.wrapper__mainWrap-steps-title-link {
+  position: absolute;
+  bottom: 10px;
+  left: 301px;
+  text-decoration: none;
+  color: rgb(48, 87, 162);
+  line-height: 24px;
+  text-align: left;
+}
+.wrapper__mainWrap-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.wrapper__mainWrap-steps__grid-item {
+  display: flex;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background: url("img\\CooperPaper-mix.png");
+}
+.wrapper__mainWrap-steps__grid-item span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 6px 12px 12px 12px;
+  margin-right: 16px;
+}
+.wrapper__mainWrap-steps__grid-item:not(:nth-child(3)), .wrapper__mainWrap-steps__grid-item:not(:last-child) {
+  padding: 20px;
+}
+.wrapper__mainWrap-steps__grid-item:nth-child(3) {
+  padding: 20px 20px 80px 20px;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.wrapper__mainWrap-steps__grid-item:last-child {
+  padding: 20px 290px 20px 20px;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.wrapper__mainWrap-steps-thumb {
+  position: absolute;
+  bottom: 0;
+  right: -64px;
 }
 
 /*# sourceMappingURL=styles.css.map */
