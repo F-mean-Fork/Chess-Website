@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание</title>
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <section class="header">
@@ -262,8 +262,89 @@
               class="wrapper__mainWrap-steps-thumb"
             />
           </div>
+          <div class="wrapper__mainWrap-participants">
+            <nav class="wrapper__mainWrap-participants__nav">
+              <h1 class="wrapper__mainWrap-participants__nav-title">
+                Участники турнира
+              </h1>
+              <div class="wrapper__mainWrap-participants__nav-btns">
+                <button id="prev-slide" class="wrapper__mainWrap-participants__nav-btns-controls">
+                  <img src="img\\chevron_left-icon.png" alt="chevron left">
+                </button>
+                <div class="wrapper__mainWrap-participants__nav-btns-counter"></div>
+                <button id="next-slide" class="wrapper__mainWrap-participants__nav-btns-controls">
+                  <img src="img\\chevron_right-icon.png" alt="chevron right">
+                </button>
+              </div>
+            </nav>
+            <div class="wrapper__mainWrap-participants__carousel">
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Хозе-Рауль Капабланка" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Хозе-Рауль Капабланка</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Чемпион мира по шахматам</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Эммануил Ласкер" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Эммануил Ласкер</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Чемпион мира по шахматам</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Александр Алехин" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Александр Алехин</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Чемпион мира по шахматам</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Арон Нимцович" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Арон Нимцович</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Чемпион мира по шахматам</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Рихард Рети" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Рихард Рети</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Чемпион мира по шахматам</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+
+              <div class="wrapper__mainWrap-participants__carousel-item">
+                <img src="img\\participant.png" alt="Александр Алехин" class="wrapper__mainWrap-participants__carousel-item-thumb" draggable="false">
+                <p class="wrapper__mainWrap-participants__carousel-item-name">Остап Бендер</p>
+                <p class="wrapper__mainWrap-participants__carousel-item-status">Гроссмейстер</p>
+                <button class="wrapper__mainWrap-participants__carousel-item-btn">Подробнее</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="footer">
+      <div class="wrapper">
+        <div class="wrapper-container__runningText">
+          <div class="wrapper-container__runningText-container">
+            <h1 class="wrapper-container__runningText-container-text">
+              Дело помощи утопающим — дело рук самих утопающих!
+            </h1>
+            <h1 class="wrapper-container__runningText-container-text">
+              Шахматы двигают вперёд не только культуру, но и экономику!
+            </h1>
+            <h1 class="wrapper-container__runningText-container-text">
+              Лед тронулся, господа присяжные заседатели
+            </h1>
+          </div>
+        </div>
+        <div class="wrapper__footerTextWrap">
+          <p class="wrapper__footerTextWrap-info">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>

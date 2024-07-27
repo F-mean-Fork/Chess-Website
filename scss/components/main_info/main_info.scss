@@ -7,6 +7,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 100px;
             margin-bottom: 64px;
 
             &-desc{
@@ -79,7 +80,7 @@
 
                     &-cell1{
                         width: 306px;
-                        color: rgb(84, 74, 74);
+                        opacity: 70%;
                         border-left: 0;
                     }
 
@@ -164,6 +165,7 @@
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(3, 1fr);
                 gap: 20px;
+                margin-bottom: 200px;
 
                 &-item{
                     display: flex;
@@ -211,6 +213,121 @@
                 right: -64px;
             }
             
+        }
+
+        &-participants{
+            &__nav{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                &-title{
+                    font-size: 54px;
+                    line-height: 64.8px;
+                }
+
+                &-btns{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 14px;
+
+                    &-controls{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        border: none;
+                        background: rgba(49, 49, 49, 1);
+                        color: white;
+                    }
+
+                    &-controls:hover,
+                    &-controls:focus{
+                        background: rgba(251, 206, 81, 1);
+
+                    }
+                }
+
+                &-btns p{
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
+            }
+
+            &__carousel{
+                margin: 60px 0 140px 0;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: calc((100% / 3) - 82px);
+                gap: 94px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                scrollbar-width: 0;
+
+                
+                &.no-transition{
+                    scroll-behavior: auto;
+                }
+
+                &.dragging{
+                    scroll-snap-type: none;
+                    scroll-behavior: auto;
+                    cursor: grab;
+                    user-select: none;
+                }
+
+                &-item{
+                    scroll-snap-align: start;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &-thumb{
+                        margin-bottom: 28px;
+                    }
+                    &-name{
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 28.8px;
+                        margin-bottom: 6px;
+                    }
+                    &-status{
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                        opacity: 60%;
+                    }
+
+                    &-btn{
+                        width: 113px;
+                        height: 35px;
+                        color: rgba(48, 87, 162, 1);
+                        background-color: transparent;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19.2px;
+                        text-align: center;
+                        border: 1px solid rgba(48, 87, 162, 1);
+                        border-radius: 62px;
+                    }
+
+                    &-btn:hover,
+                    &-btn:focus{
+                        color: rgba(255, 255, 255, 1);
+                        background: rgba(48, 87, 162, 1);
+
+                    }
+
+                }
+            }
+
+            &__carousel::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 }

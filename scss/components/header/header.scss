@@ -168,14 +168,13 @@
             background: rgba(245, 73, 50, 1);
             width: 100%;
             height: 60px;
-            margin-bottom: 100px;
             overflow: hidden;
 
             &-container{
                 display: flex;
                 width: 100%;
                 padding: 18px 0;
-                animation: runningText 20s linear infinite;
+                animation: runningText 5s linear infinite;
                 
                 &-text{
                     white-space: nowrap;

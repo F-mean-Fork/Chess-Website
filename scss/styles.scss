@@ -1,7 +1,6 @@
-@import ".\\common";
+
+@import ".\\common\\index.scss";
+
 @import ".\\components\\header\\index.scss";
 @import ".\\components\\main_info\\index.scss";
-
-
-
-// @import ".\\components\\footer\\index.scss";
+@import ".\\components\\footer\\index.scss";
