@@ -261,7 +261,8 @@
                 margin: 60px 0 140px 0;
                 display: grid;
                 grid-auto-flow: column;
-                grid-template-columns: calc((100% / 3) - 82px);
+                grid-template-columns: repeat(3, 1fr);
+                // calc((100% / 3) - 50%)
                 gap: 94px;
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
