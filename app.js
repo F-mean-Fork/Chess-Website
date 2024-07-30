@@ -3,7 +3,7 @@ const carousel = document.querySelector(".wrapper__mainWrap-participants__carous
 const buttons = document.querySelectorAll(".wrapper__mainWrap-participants__nav-btns-controls");
 const firstCardWidth = carousel.querySelector(".wrapper__mainWrap-participants__carousel-item").offsetWidth;
 const carouselChild = [...carousel.children];
-const counterElement = document.querySelector(".wrapper__mainWrap-participants__nav-btns-counter"); // добавляем элемент для счетчика
+const counterElement = document.querySelector(".wrapper__mainWrap-participants__nav-btns-counter"); 
 
 let isDragging = false, startX, startSrcollLeft, timeoutId;
 
@@ -62,7 +62,7 @@ const infiniteScroll = () => {
 
   clearTimeout(timeoutId);
   if (!wrapper.matches(":hover")) autoPlay();
-  updateCounter(); // обновляем счетчик
+  updateCounter();
 };
 
 carousel.addEventListener("mousedown", dragStart);
