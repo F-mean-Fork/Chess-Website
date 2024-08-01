@@ -366,7 +366,6 @@ h1 {
 
 .wrapper {
   max-width: 1366px;
-  max-height: 100%;
   margin: 0 auto;
 }
 
@@ -561,7 +560,8 @@ h1 {
 }
 
 .wrapper__mainWrap {
-  margin: 0 72px 64px 72px;
+  width: 89.458272328%;
+  margin: 0 72px;
 }
 .wrapper__mainWrap-title {
   display: flex;
@@ -751,7 +751,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 44px;
-  height: 44px;
+  aspect-ratio: 1;
   border-radius: 50%;
   border: none;
   background: rgb(49, 49, 49);
@@ -765,24 +765,16 @@ h1 {
   line-height: 19.2px;
 }
 .wrapper__mainWrap-participants__carousel {
-  margin: 60px 0 140px 0;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 60px 0 140px 37px;
+  width: 1148px;
+  display: flex;
+  justify-content: space-between;
   gap: 94px;
+  align-items: center;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: 0;
-}
-.wrapper__mainWrap-participants__carousel.no-transition {
-  scroll-behavior: auto;
-}
-.wrapper__mainWrap-participants__carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-  cursor: grab;
-  user-select: none;
 }
 .wrapper__mainWrap-participants__carousel-item {
   scroll-snap-align: start;
@@ -820,6 +812,15 @@ h1 {
 .wrapper__mainWrap-participants__carousel-item-btn:hover, .wrapper__mainWrap-participants__carousel-item-btn:focus {
   color: rgb(255, 255, 255);
   background: rgb(48, 87, 162);
+}
+.wrapper__mainWrap-participants__carousel.no-transition {
+  scroll-behavior: auto;
+}
+.wrapper__mainWrap-participants__carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  cursor: grab;
+  user-select: none;
 }
 .wrapper__mainWrap-participants__carousel::-webkit-scrollbar {
   display: none;

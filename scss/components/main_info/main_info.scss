@@ -1,7 +1,8 @@
 .wrapper{
 
     &__mainWrap{
-        margin: 0 72px 64px 72px;
+        width: 89.458272328%;
+        margin: 0 72px;
 
         &-title{
             display: flex;
@@ -237,7 +238,7 @@
                         justify-content: center;
                         align-items: center;
                         width: 44px;
-                        height: 44px;
+                        aspect-ratio: 1;
                         border-radius: 50%;
                         border: none;
                         background: rgba(49, 49, 49, 1);
@@ -258,29 +259,21 @@
             }
 
             &__carousel{
-                margin: 60px 0 140px 0;
-                display: grid;
-                grid-auto-flow: column;
-                grid-template-columns: repeat(3, 1fr);
-                // repeat(3, minmax(0, 1fr));
-                // calc((100% / 3) - 50%)
+                // margin: 60px 0 140px 0;
+                // display: grid;
+                // grid-auto-flow: column;
+                // grid-template-columns: repeat(3, 1fr);
+                // gap: 130px;
+                margin: 60px 0 140px 37px;
+                width: 1148px;
+                display: flex;
+                justify-content: space-between;
                 gap: 94px;
+                align-items: center;
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
                 scroll-behavior: smooth;
                 scrollbar-width: 0;
-
-                
-                &.no-transition{
-                    scroll-behavior: auto;
-                }
-
-                &.dragging{
-                    scroll-snap-type: none;
-                    scroll-behavior: auto;
-                    cursor: grab;
-                    user-select: none;
-                }
 
                 &-item{
                     scroll-snap-align: start;
@@ -326,6 +319,18 @@
 
                 }
             }
+
+            &__carousel.no-transition{
+                scroll-behavior: auto;
+            }
+
+            &__carousel.dragging{
+                scroll-snap-type: none;
+                scroll-behavior: auto;
+                cursor: grab;
+                user-select: none;
+            }
+
 
             &__carousel::-webkit-scrollbar {
                 display: none;
