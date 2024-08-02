@@ -1,9 +1,9 @@
 //Step Container Slider
 const stepNextBtn  = document.querySelector('#right-btn');
 const stepPrevBtn  = document.querySelector('#left-btn');
-const dots = document.querySelectorAll('.wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot');
-const slider = document.querySelector('.wrapper__mainWrap-steps-smallScreen__flex')
-const slide = document.querySelectorAll('.wrapper__mainWrap-steps-smallScreen__flex-item')
+const dots = document.querySelectorAll('.wrapper__mainWrap__steps--smallScreen__btnWrap__dotsWrap__dot');
+const slider = document.querySelector('.wrapper__mainWrap__steps--smallScreen__flex')
+const slide = document.querySelectorAll('.wrapper__mainWrap__steps--smallScreen__flex__item')
 
 let activeDot = 0;
 

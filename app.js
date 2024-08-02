@@ -1,17 +1,9 @@
-const wrapper = document.querySelector(".wrapper__mainWrap-participants");
-const carousel = document.querySelector(
-  ".wrapper__mainWrap-participants__carousel"
-);
-const buttons = document.querySelectorAll(
-  ".wrapper__mainWrap-participants__nav-btns .wrapper__mainWrap-participants__nav-btns-controls"
-);
-const firstCardWidth = carousel.querySelector(
-  ".wrapper__mainWrap-participants__carousel-item"
-).offsetWidth;
+const wrapper = document.querySelector(".wrapper__mainWrap__participants");
+const carousel = document.querySelector(".wrapper__mainWrap__participants__carousel");
+const buttons = document.querySelectorAll(".wrapper__mainWrap__participants__nav__btns .wrapper__mainWrap__participants__nav__btns__controls");
+const firstCardWidth = carousel.querySelector(".wrapper__mainWrap__participants__carousel__item").offsetWidth;
 const carouselChild = [...carousel.children];
-const counterElement = document.querySelector(
-  ".wrapper__mainWrap-participants__nav-btns-counter"
-);
+const counterElement = document.querySelector(".wrapper__mainWrap__participants__nav__btns__counter");
 
 
 let isDragging = false,
@@ -86,16 +78,16 @@ const infiniteScroll = () => {
   updateCounter();
 };
 
+const updateCounter = () => {
+  const totalImages = carouselChild.length;
+  const currentIndex = (Math.floor(carousel.scrollLeft / firstCardWidth) % totalImages) + 1;
+  counterElement.innerHTML = `<span style="opacity: 0.6">${currentIndex}</span>/${totalImages}`;
+};
+
+
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", infiniteScroll);
-
-const updateCounter = () => {
-  const totalImages = carouselChild.length;
-  const currentIndex =
-    (Math.floor(carousel.scrollLeft / firstCardWidth) % totalImages) + 1;
-  counterElement.innerHTML = `<span style="opacity: 0.6">${currentIndex}</span>/${totalImages}`;
-};

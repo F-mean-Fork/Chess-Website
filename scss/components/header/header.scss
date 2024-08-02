@@ -1,14 +1,14 @@
-.wrapper{
+.wrapper {
     max-width: 100%;
     margin: 0 auto;
 
-    &-container{
+    &__container {
         width: 100%;
         height: auto;
         position: relative;
         object-fit: cover;
-        
-        &__logo{
+
+        &__logo {
             position: absolute;
             left: 72px;
             top: 26px;
@@ -20,20 +20,20 @@
             height: 36px;
             z-index: 3;
 
-            &-link{
+            &__link {
                 text-decoration: none;
                 z-index: 3;
             }
 
-            &-pic{
+            &__pic {
 
-                &-thumb{
+                &__thumb {
                     height: 100%;
                     width: auto;
                 }
             }
 
-            &-name{
+            &__name {
                 color: rgba(89, 86, 83, 1);
                 font-size: 16.65px;
                 font-weight: 700;
@@ -43,7 +43,7 @@
             }
         }
 
-        &-copperLayer {
+        &__copperLayer {
             position: absolute;
             top: 0;
             left: 0;
@@ -53,7 +53,7 @@
             z-index: 1;
         }
 
-        &__info{
+        &__info {
             position: absolute;
             left: 72px;
             top: 124px;
@@ -61,26 +61,27 @@
             color: rgba(49, 49, 49, 1);
             z-index: 999;
 
-            &-title{
-                font-family:  Merriweather; 
+            &__title {
+                font-family: Merriweather;
+                text-transform: uppercase;
                 font-size: 60px;
                 line-height: 66px;
                 margin-bottom: 24px;
             }
-            
-            &-subtitle{
+
+            &__subtitle {
                 font-size: 18px;
                 line-height: 23.4px;
                 text-align: center;
                 margin-bottom: 40px;
             }
-            
-            &-form{
+
+            &__form {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                
-                &-link{
+
+                &__link {
                     width: 263px;
                     height: 72px;
                     border-radius: 66px;
@@ -94,102 +95,102 @@
                     cursor: pointer;
 
                 }
-                
-                &-link:first-child{
+
+                &__link:first-child {
                     color: rgba(255, 255, 255, 1);
                     background: rgba(31, 31, 31, 1);
                 }
-                
-                &-link:first-child:hover{
+
+                &__link:first-child:hover {
                     color: rgba(31, 31, 31, 1);
                     background: rgba(251, 206, 81, 1);
-                
+
                 }
-                
-                &-link:last-child{
+
+                &__link:last-child {
                     border: 2px solid rgba(31, 31, 31, 1);
                     color: rgba(31, 31, 31, 1);
                 }
-                
-                &-link:last-child:hover{
+
+                &__link:last-child:hover {
                     color: rgba(255, 255, 255, 1);
                     background: rgba(31, 31, 31, 1);
                 }
             }
         }
-        
-        &-city{
+
+        &__city {
             position: absolute;
             bottom: 0;
             right: 0;
             z-index: 5;
         }
-        
-        &-ellipse{
+
+        &__ellipse {
             position: absolute;
             top: 0;
             right: 33px;
             z-index: 3;
             opacity: 66%;
         }
-        
-        &-ellipseWords{
+
+        &__ellipseWords {
             position: absolute;
             top: 0;
             right: 0;
             z-index: 2;
         }
 
-        &-mainPic{
+        &__mainPic {
             height: 821px;
             width: 100%;
         }
 
 
-        &-knight{
+        &__knight {
             position: absolute;
             bottom: 0;
             right: 334.28px;
             z-index: 5;
         }
 
-        &-pawn{
+        &__pawn {
             position: absolute;
             bottom: 19.28px;
             right: 44.55px;
             z-index: 5;
         }
-        
-        &-king1{
+
+        &__king1 {
             position: absolute;
             bottom: 164.31px;
             right: 506.92px;
             z-index: 4;
         }
-        
-        &-king2{
+
+        &__king2 {
             position: absolute;
             bottom: 269.54px;
             right: 159.04px;
             z-index: 4;
         }
-        
+
         &__runningText {
             background: rgba(245, 73, 50, 1);
             width: 100%;
-            height: 60px;    
+            height: 60px;
             overflow: hidden;
             margin: 0 auto;
             overflow: hidden;
             white-space: nowrap;
             bottom: 0;
 
-            &-container{
+            &__container {
                 display: inline-block;
                 margin-top: 18px;
                 animation: marquee 20s linear infinite;
-                
-                &-collection-1{
+
+                &__collection1 {
                     position: relative;
                     left: 0%;
                     animation: swap 20s linear infinite;
@@ -203,32 +204,37 @@
                     color: rgba(255, 255, 255, 1);
                     margin-right: 12px;
                 }
-                
+
                 .item::before {
                     content: "\2022";
                     font-size: 22px;
                     line-height: 24.2px;
                     margin-right: 12px;
                 }
+
                 @keyframes marquee {
                     0% {
-                      transform: translateX(0)
+                        transform: translateX(0)
                     }
+
                     100% {
-                      transform: translateX(-100%)
+                        transform: translateX(-100%)
                     }
-                  }
-                  
-                  @keyframes swap {
-                    0%, 50% {
-                      left: 0%;
+                }
+
+                @keyframes swap {
+
+                    0%,
+                    50% {
+                        left: 0%;
                     }
+
                     50.01%,
                     100% {
-                      left: 100%;
+                        left: 100%;
                     }
                 }
             }
-        }     
-    }    
+        }
+    }
 }

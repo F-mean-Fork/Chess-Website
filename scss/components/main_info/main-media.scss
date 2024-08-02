@@ -5,18 +5,18 @@
             width: 335px;
             margin: 0 20px 0 19px;
 
-            &-title-full-screen {
+            &__title--fullScreen {
                 display: none;
             }
 
-            &-title-small-screen {
+            &__title--smallScreen {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 48px;
                 margin-bottom: 34px;
 
-                &-desc {
+                &__desc {
                     font-family: Merriweather;
                     font-size: 28px;
                     width: 335px;
@@ -34,21 +34,22 @@
                 img {
                     width: 100%;
                     height: auto;
+                    margin-top: 24px;
                     margin-bottom: 34px;
                 }
             }
 
-            &-gameWrap {
+            &__gameWrap {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
 
-                &-thumb {
+                &__thumb {
                     margin-left: 19px;
                     width: 110%;
                 }
 
-                &-info {
+                &__info {
                     width: 335px;
 
                     &__title {
@@ -59,12 +60,12 @@
                         line-height: 37.8px;
                         text-transform: uppercase;
 
-                        &-full-range {
+                        &--fullScreen {
                             display: none;
                         }
 
 
-                        &-small-range {
+                        &--smallScreen {
                             display: block;
                         }
 
@@ -77,11 +78,11 @@
                         }
                     }
 
-                    &__table-fullScreen {
+                    &__table--fullScreen {
                         display: none;
                     }
 
-                    &__table-smallScreen {
+                    &__table--smallScreen {
                         display: block;
                         width: 100%;
                         font-size: 20px;
@@ -94,18 +95,18 @@
                             border: 2px solid rgba(208, 208, 208, 1)
                         }
 
-                        &-q {
+                        &__q {
                             opacity: 0.7;
                             margin-bottom: 12px;
                         }
 
-                        &-a {
+                        &__a {
                             font-weight: 600;
                         }
                     }
                 }
 
-                &-info>a {
+                &__info>a {
                     text-decoration: none;
                     font-size: 18px;
                     line-height: 21.6px;
@@ -115,16 +116,16 @@
                 }
             }
 
-            &-steps-fullScreen {
+            &__steps--fullScreen {
                 display: none;
             }
 
-            &-steps-smallScreen {
+            &__steps--smallScreen {
                 display: block;
                 margin-top: 120px;
                 position: relative;
 
-                &-thumb {
+                &__thumb {
                     width: 95%;
                     height: auto;
                     position: absolute;
@@ -132,11 +133,11 @@
                     left: 8px;
                 }
 
-                &-title {
+                &__title {
                     display: flex;
                     flex-wrap: wrap;
 
-                    &-text {
+                    &__text {
                         font-family: Merriweather;
                         font-size: 36px;
                         line-height: 39.6px;
@@ -144,7 +145,7 @@
 
                     }
 
-                    &-link {
+                    &__link {
                         text-decoration: none;
                         color: rgba(48, 87, 162, 1);
                         line-height: 24px;
@@ -159,7 +160,7 @@
                     overflow: hidden;
                     margin-bottom: 28px;
 
-                    &-item {
+                    &__item {
                         height: 300px;
                         display: flex;
                         flex-direction: column;
@@ -169,7 +170,7 @@
                         padding-left: 20px;
                         background: url('img\\CooperPaper-mix.png');
 
-                        &-info{
+                        &__info{
                             font-weight: 500;
                             font-size: 18px;
                             line-height: 21.6px;
@@ -199,7 +200,7 @@
 
                 }
 
-                &-btnWrap{
+                &__btnWrap{
                     display: flex;
                     flex-wrap: nowrap;
                     justify-content: space-between;
@@ -213,7 +214,7 @@
                         justify-content: space-between;
                         gap: 6px;
 
-                        &-dot{
+                        &__dot{
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
@@ -225,7 +226,7 @@
                         }
                     }
 
-                    &-controls{
+                    &__controls{
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -238,15 +239,15 @@
                     }
 
                     
-                    &-controls:hover {
+                    &__controls:hover {
                         background: rgba(251, 206, 81, 1);
                     }
 
-                    &-controls:active {
+                    &__controls:active {
                         background-color: initial;
                     }
 
-                    &-controls:disabled{
+                    &__controls:disabled{
                         background:lightgray;
                     }
                 }
@@ -254,21 +255,21 @@
 
             }
 
-            &-steps-fullScreen {
+            &__steps-fullScreen {
                 display: none;
             }
 
-            &-participants {
+            &__participants {
                 position: relative;
 
                 &__nav {
-                    &-title {
+                    &__title {
                         font-size: 36px;
                         line-height: 39.6px;
                         text-align: left;
                     }
 
-                    &-btns {
+                    &__btns {
                         position: absolute;
                         bottom: 0;
                         left: 50%;
@@ -278,7 +279,7 @@
                         align-items: center;
                         gap: 14px;
 
-                        &-controls {
+                        &__controls {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -290,14 +291,14 @@
                             color: white;
                         }
 
-                        &-controls:hover,
-                        &-controls:focus {
+                        &__controls:hover,
+                        &__controls:focus {
                             background: rgba(251, 206, 81, 1);
 
                         }
                     }
 
-                    &-btns p {
+                    &__btns p {
                         font-size: 16px;
                         line-height: 19.2px;
                     }
@@ -315,7 +316,7 @@
                     scroll-behavior: smooth;
                     scrollbar-width: 0;
 
-                    &-item {
+                    &__item {
                         width: 335px;
                         scroll-snap-align: start;
                         display: flex;
@@ -323,13 +324,13 @@
                         align-items: center;
                         cursor: pointer;
 
-                        &-thumb {
+                        &__thumb {
                             width: 244px;
                             aspect-ratio: 1;
                             margin-bottom: 28px;
                         }
 
-                        &-name {
+                        &__name {
                             text-align: center;
                             font-size: 24px;
                             font-weight: 600;
@@ -337,7 +338,7 @@
                             margin-bottom: 6px;
                         }
 
-                        &-status {
+                        &__status {
                             text-align: center;
                             width: 277px;
                             line-height: 24px;
@@ -345,7 +346,7 @@
                             opacity: 60%;
                         }
 
-                        &-btn {
+                        &__btn {
                             width: 113px;
                             height: 35px;
                             color: rgba(48, 87, 162, 1);
@@ -359,8 +360,8 @@
                             margin-bottom: 76px;
                         }
 
-                        &-btn:hover,
-                        &-btn:focus {
+                        &__btn:hover,
+                        &__btn:focus {
                             color: rgba(255, 255, 255, 1);
                             background: rgba(48, 87, 162, 1);
 
