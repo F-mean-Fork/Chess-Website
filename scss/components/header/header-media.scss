@@ -1,0 +1,265 @@
+@media (max-width: $breakpoint_sm) {
+    .wrapper {
+        overflow: hidden;
+
+        &-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+
+            &__logo {
+                position: absolute;
+                left: 20px;
+                top: 18px;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 6.35px;
+                height: 36px;
+                z-index: 3;
+
+                &-link {
+                    text-decoration: none;
+                    z-index: 3;
+                }
+
+                &-pic {
+
+                    &-thumb {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
+                &-name {
+                    color: rgba(89, 86, 83, 1);
+                    font-family: Golos Text;
+                    font-size: 14.42px;
+                    font-weight: 700;
+                    line-height: 15.57px;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    width: 147px;
+                }
+            }
+
+            &-copperLayer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(233, 222, 212, 0.70);
+                z-index: 1;
+            }
+
+            &__info {
+                position: absolute;
+                left: 20px;
+                top: 90px;
+                width: 335px;
+                color: rgba(49, 49, 49, 1);
+                z-index: 999;
+
+                &-title {
+                    font-family: Merriweather;
+                    font-size: 36px;
+                    line-height: 39.6px;
+                    letter-spacing: 1.2361623048782349px;
+                    text-align: left;
+                    margin-bottom: 24px;
+
+                }
+
+                &-subtitle {
+                    font-family: Golos Text;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 23.4px;
+                    text-align: left;
+
+                }
+
+                &-form {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 14px;
+
+
+                    &-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 335px;
+                        height: 47px;
+                        border-radius: 66px;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20.8px;
+                        padding: 18px 20px;
+                        transition: transform 0.2s ease-in-out;
+                        cursor: pointer;
+
+                    }
+
+                    &-link:first-child {
+                        color: rgba(255, 255, 255, 1);
+                        background: rgba(31, 31, 31, 1);
+                    }
+
+                    &-link:first-child:hover {
+                        color: rgba(31, 31, 31, 1);
+                        background: rgba(251, 206, 81, 1);
+
+                    }
+
+                    &-link:last-child {
+                        border: 2px solid rgba(31, 31, 31, 1);
+                        color: rgba(31, 31, 31, 1);
+                    }
+
+                    &-link:last-child:hover {
+                        color: rgba(255, 255, 255, 1);
+                        background: rgba(31, 31, 31, 1);
+                    }
+                }
+            }
+
+            &-city {
+                width: 205%;
+                height: 39%;
+                position: absolute;
+
+                bottom: 0;
+                right: -40px;
+                z-index: 5;
+            }
+
+            &-mainPic{
+                height: 821px;
+                width: 100%;
+                height: 821px;
+                object-fit: cover;
+            }
+
+            &-ellipse {
+                position: absolute;
+                width: 90%;
+                height: auto;
+                top: 420px;
+             left: 50%;
+                transform: translateX(-50%);                      
+                z-index: 3;
+                opacity: 66%;
+            }
+
+            &-ellipseWords {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 423px;
+                right: 6px;
+                z-index: 2;
+            }
+
+            &-knight {
+                width: 27%;
+                height: auto;
+                right: 129.98px;
+                bottom: 0;
+                position: absolute;
+                z-index: 5;
+            }
+
+            &-pawn {
+                display: none;
+            }
+
+            &-king1 {
+                width: 18%;
+                height: auto;
+                bottom: 125px;
+                left: 55px;
+               
+                z-index: 4;
+            }
+
+            &-king2 {
+                width: 18%;
+                height: auto;
+                bottom: 195px;
+                right: 78px;
+                rotate: 5deg;
+                z-index: 4;
+            }
+
+            &__runningText {
+                background: rgba(245, 73, 50, 1);
+                width: 100%;
+                height: 38px;
+                overflow: hidden;
+                margin: 0 auto;
+                overflow: hidden;
+                white-space: nowrap;
+                bottom: 0;
+
+                &-container {
+                    display: inline-block;
+                    margin-top: 6px;
+                    animation: marquee 30s linear infinite;
+
+                    &-collection-1 {
+                        position: relative;
+                        left: 0%;
+                        animation: swap 30s linear infinite;
+                    }
+
+                    .item {
+                        text-transform: uppercase;
+                        font-family: Merriweather;
+                        font-size: 18px;
+                        line-height: 17.6px;
+                        color: rgba(255, 255, 255, 1);
+                        margin-right: 12px;
+                    }
+
+                    .item::before {
+                        content: "\2022";
+                        font-size: 22px;
+                        line-height: 24.2px;
+                        margin-right: 12px;
+                    }
+
+                    @keyframes marquee {
+                        0% {
+                            transform: translateX(0)
+                        }
+
+                        100% {
+                            transform: translateX(-100%)
+                        }
+                    }
+
+                    @keyframes swap {
+
+                        0%,
+                        50% {
+                            left: 0%;
+                        }
+
+                        50.01%,
+                        100% {
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

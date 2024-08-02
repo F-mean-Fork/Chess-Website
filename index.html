@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <script src="app.js" defer></script>
+    <script src="step_slider.js" defer></script>
   </head>
   <body>
     <section class="header">
@@ -132,8 +133,8 @@
     <section class="mainInfo">
       <div class="wrapper">
         <div class="wrapper__mainWrap">
-          <div class="wrapper__mainWrap-title">
-            <div class="wrapper__mainWrap-title-desc">
+          <div class="wrapper__mainWrap-title-full-screen">
+            <div class="wrapper__mainWrap-title-full-screen-desc">
               <h1>
                 Чтобы поддержать<br />Международный васюкинский<br />турнир
                 посетите лекцию на тему:
@@ -141,6 +142,16 @@
               <a href="#">«Плодотворная дебютная идея»</a>
             </div>
             <img src="img\\chess-tournament.png" alt="Chess Tournament" />
+          </div>
+          <div class="wrapper__mainWrap-title-small-screen">
+            <div class="wrapper__mainWrap-title-small-screen-desc">
+              <h1>
+                Чтобы поддержать Международный васюкинский турнир
+              </h1>
+              <img src="img\\chess-tournament.png" alt="Chess Tournament" />           
+              <h1>посетите лекцию на тему:</h1>              
+              <a href="#">«Плодотворная дебютная идея»</a>
+            </div>
           </div>
           <div class="wrapper__mainWrap-gameWrap">
             <img
@@ -150,50 +161,55 @@
             />
             <div class="wrapper__mainWrap-gameWrap-info">
               <div class="wrapper__mainWrap-gameWrap-info__title">
-                <h1>
+                <h1 class="wrapper__mainWrap-gameWrap-info__title-full-range">
                   и Сеанс<a href="#">
                     одновременной игры<br />в шахматы на 160 досках </a
                   >гроссмейстера О. Бендера
                 </h1>
+                <h1 class="wrapper__mainWrap-gameWrap-info__title-small-range">
+                  и Сеанс<a href="#">
+                    одновременной игрыв шахматы на 160 досках </a
+                  >гроссмейстера<br />О. Бендера
+                </h1>
               </div>
-              <div class="wrapper__mainWrap-gameWrap-info__table">
-                <div class="wrapper__mainWrap-gameWrap-info__table-row">
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+              <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen">
+                <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell1">
                     Место проведения:
                   </div>
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell2">
                     Клуб «Картонажник»
                   </div>
                 </div>
-                <div class="wrapper__mainWrap-gameWrap-info__table-row">
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell1">
                     Дата и время мероприятия:
                   </div>
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell2">
                     22 июня 1927 г. в 18:00
                   </div>
                 </div>
-                <div class="wrapper__mainWrap-gameWrap-info__table-row">
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell1">
                     Стоимость входных билетов:
                   </div>
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell2">
                     20 коп.
                   </div>
                 </div>
-                <div class="wrapper__mainWrap-gameWrap-info__table-row">
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell1">
                     Плата за игру:
                   </div>
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell2">
                     50 коп.
                   </div>
                 </div>
-                <div class="wrapper__mainWrap-gameWrap-info__table-row">
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell1">
+                <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-row">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell1">
                     Взнос на телеграммы:
                   </div>
-                  <div class="wrapper__mainWrap-gameWrap-info__table-cell2">
+                  <div class="wrapper__mainWrap-gameWrap-info__table-fullScreen-cell2">
                     <s
                       style="
                         text-decoration: line-through;
@@ -206,59 +222,149 @@
                   </div>
                 </div>
               </div>
-              <a href="#"
-                >По всем вопросам обращаться в администрацию к К. Михельсону</a
-              >
+              <div class="wrapper__mainWrap-gameWrap-info__table-smallScreen">
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-q">Место проведения:</p>  
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-a">Клуб «Картонажник»<a>
+                <hr>
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-q">Дата и время мероприятия:</p>  
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-a">22 июня 1927 г. в 18:00</p>
+                <hr>
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-q">Стоимость входных билетов:</p>  
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-a">20 коп.</p>
+                <hr>
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-q">Плата за игру:</p>  
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-a">50 коп.</p>
+                <hr>
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-q">Взнос на телеграммы:</p>  
+                <p class="wrapper__mainWrap-gameWrap-info__table-smallScreen-a">
+                  <s 
+                  style="text-decoration: line-through; 
+                  text-decoration-color: red; 
+                  text-decoration-thickness: 2px;"
+                  >100 руб.</s> 21 руб. 16 коп.
+                </p>
+              </div>
+              <a href="#">По всем вопросам обращаться в администрацию к К. Михельсону</a>
             </div>
           </div>
-          <div class="wrapper__mainWrap-steps">
-            <div class="wrapper__mainWrap-steps-title">
-                <h1 class="wrapper__mainWrap-steps-title-text">
-                    Этапы преображения Васюков
-                    </h1>
-                    <a href="#" class="wrapper__mainWrap-steps-title-link">Будущие источники<br>обогащения васюкинцев</a>
+          
+          <div class="wrapper__mainWrap-steps-fullScreen">
+            <div class="wrapper__mainWrap-steps-fullScreen-title">
+                <h1 class="wrapper__mainWrap-steps-fullScreen-title-text">
+                  Этапы преображения Васюков
+                </h1>
+                <a href="#" class="wrapper__mainWrap-steps-fullScreen-title-link">Будущие источники<br>обогащения васюкинцев</a>
             </div>
-            <div class="wrapper__mainWrap-steps__grid">
-              <div class="wrapper__mainWrap-steps__grid-item">
+            <div class="wrapper__mainWrap-steps-fullScreen__grid">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">1</span>
                 Строительство железнодорожной магистрали Москва-Васюки
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">2</span>
                 Открытие фешенебельной гостиницы «Проходная пешка» и других
                 небоскрёбов
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">3</span>
                 Поднятие сельского хозяйства в радиусе на тысячу километров:
                 производство овощей, фруктов, икры, шоколадных конфет
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">4</span>
                 Строительство дворца для турнира
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">5</span>
                 Размещение гаражей для гостевого автотранспорта
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">6</span>
                 Постройка сверхмощной радиостанции для передачи всему миру
                 сенсационных результатов
               </div>
-              <div class="wrapper__mainWrap-steps__grid-item">
+              <div class="wrapper__mainWrap-steps-fullScreen__grid-item">
                 <span class="step-number">7</span>
                 Создание аэропорта «Большие Васюки»<br />с регулярным
                 отправлением почтовых самолётов и дирижаблей во все концы света,
                 включая Лос-Анжелос и Мельбурн
               </div>
             </div>
-            <img
-              src="img\\plane.png"
-              alt="Plane"
-              class="wrapper__mainWrap-steps-thumb"
-            />
+            <img src="img\\plane.png" alt="Plane" class="wrapper__mainWrap-steps-fullScreen-thumb"/>
           </div>
+
+          <div class="wrapper__mainWrap-steps-smallScreen">
+            <div class="wrapper__mainWrap-steps-smallScreen-title">
+                <h1 class="wrapper__mainWrap-steps-smallScreen-title-text">
+                  Этапы преображения Васюков
+                </h1>
+                <a href="#" class="wrapper__mainWrap-steps-smallScreen-title-link">Будущие источники<br>обогащения васюкинцев</a>
+            </div>
+            <img src="img\\plane.png" alt="Plane" class="wrapper__mainWrap-steps-smallScreen-thumb"/>
+            <div class="wrapper__mainWrap-steps-smallScreen__flex">
+              <div class="wrapper__mainWrap-steps-smallScreen__flex-item">
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">1</span>
+                  <p>Строительство железнодорожной магистрали Москва-Васюки</p>
+                </div>
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">2</span>
+                  <p>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+                </div>
+              </div>
+
+              <div class="wrapper__mainWrap-steps-smallScreen__flex-item">
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">3</span>
+                  <p>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+                </div>
+              </div>
+
+              <div class="wrapper__mainWrap-steps-smallScreen__flex-item">
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">4</span>
+                  <p>Строительство дворца для турнира</p>
+                </div>
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">5</span>
+                  <p>Размещение гаражей для гостевого автотранспорта</p>
+                </div>
+              </div>
+
+              <div class="wrapper__mainWrap-steps-smallScreen__flex-item">
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">6</span>
+                  <p>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+                </div>
+              </div>
+
+              <div class="wrapper__mainWrap-steps-smallScreen__flex-item">
+                <div class="wrapper__mainWrap-steps-smallScreen__flex-item-info">
+                  <span class="step-number">7</span>
+                  <p>Создание аэропорта «Большие Васюки»<br />с регулярным
+                  отправлением почтовых самолётов и дирижаблей во все концы света,
+                  включая Лос-Анжелос и Мельбурн</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="wrapper__mainWrap-steps-smallScreen-btnWrap">
+              <button id="left-btn" class="wrapper__mainWrap-steps-smallScreen-btnWrap-controls">
+                <img src="img\\chevron_left-icon.png" alt="chevron left">
+              </button>
+              <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap">
+                <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot"></div>
+                <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot"></div>
+                <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot"></div>
+                <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot"></div>
+                <div class="wrapper__mainWrap-steps-smallScreen-btnWrap__dotsWrap-dot"></div>
+              </div>
+              <button id="right-btn" class="wrapper__mainWrap-steps-smallScreen-btnWrap-controls">
+                <img src="img\\chevron_right-icon.png" alt="chevron right">
+              </button>
+            </div>
+          </div>
+
           <div class="wrapper__mainWrap-participants">
             <nav class="wrapper__mainWrap-participants__nav">
               <h1 class="wrapper__mainWrap-participants__nav-title">

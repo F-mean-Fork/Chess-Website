@@ -13,6 +13,7 @@ const counterElement = document.querySelector(
   ".wrapper__mainWrap-participants__nav-btns-counter"
 );
 
+
 let isDragging = false,
   startX,
   startSrcollLeft,
