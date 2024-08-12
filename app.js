@@ -1,3 +1,8 @@
+//Примечние автора: 
+// В конце кода добавлена функция для автоматического обновления страницы
+// для корректной работы бесконечного слайдера
+
+
 // Carousel data
 const carousel = document.querySelector('#carousel');
 const carouselStyles = getComputedStyle(carousel);
@@ -77,3 +82,11 @@ showCards(step);
 setInterval(() => {
   navigateSlide('next');
 }, 4000);
+
+//Automatic page refresh for correct operation of the infinity slider
+window.addEventListener('resize', () => {
+
+  slidesPerView = getSlidesPerView();
+
+  window.location.reload(true);
+});
