@@ -1,93 +1,79 @@
-const wrapper = document.querySelector(".wrapper__mainWrap__participants");
-const carousel = document.querySelector(".wrapper__mainWrap__participants__carousel");
-const buttons = document.querySelectorAll(".wrapper__mainWrap__participants__nav__btns .wrapper__mainWrap__participants__nav__btns__controls");
-const firstCardWidth = carousel.querySelector(".wrapper__mainWrap__participants__carousel__item").offsetWidth;
-const carouselChild = [...carousel.children];
-const counterElement = document.querySelector(".wrapper__mainWrap__participants__nav__btns__counter");
+// Carousel data
+const carousel = document.querySelector('#carousel');
+const carouselStyles = getComputedStyle(carousel);
+const cards = carousel.querySelectorAll('.card');
+
+//Carousel item data
+const cardAmount = cards.length;
+const carouselGap = parseInt(carouselStyles.getPropertyValue('gap'));
+const cardWidth = document.querySelector('.card').offsetWidth;
+const scrollLength = cardWidth + carouselGap;
 
 
-let isDragging = false,
-  startX,
-  startSrcollLeft,
-  timeoutId;
+// Buttons data
+const leftBtn = document.querySelector('#CarouselBtnLeft');
+const rightBtn = document.querySelector('#CarouselBtnRight');
 
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+// Buttons processing
+leftBtn.addEventListener("click", () => navigateSlide('prev'));
+rightBtn.addEventListener("click", () => navigateSlide('next'));
 
-//Infinity scrolling
-carouselChild
-  .slice(-cardPerView)
-  .reverse()
-  .forEach((card) => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
+// Card container
+let cardContainer = [];
+for (let i = 0; i < cardAmount; i++) {
+  cardContainer[i] = cards[i];
+  cards[i].remove();
+}
 
-carouselChild
-  .slice(0, cardPerView)
-  .reverse()
-  .forEach((card) => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-  });
+// Variables
+let step = 0;
+let slidesPerView = getSlidesPerView();
 
-//Mouse scroll
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
-  });
-});
-
-const dragStart = (e) => {
-  isDragging = true;
-  carousel.classList.add("dragging");
-  startX = e.pageX;
-  startSrcollLeft = carousel.scrollLeft;
-};
-
-const dragging = (e) => {
-  if (!isDragging) return;
-  carousel.scrollLeft = startSrcollLeft - (e.pageX - startX);
-};
-
-const dragStop = () => {
-  isDragging = false;
-  carousel.classList.remove("dragging");
-};
-
-const autoPlay = () => {
-  if (window.innerWidth < 800) return;
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
-};
-
-autoPlay();
-
-const infiniteScroll = () => {
-  if (carousel.scrollLeft === 0) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-    carousel.classList.remove("no-transition");
-  } else if (
-    Math.ceil(carousel.scrollLeft) ===
-    carousel.scrollWidth - carousel.offsetWidth
-  ) {
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
+// Check screen size and adjust slidesPerView
+function getSlidesPerView() 
+{
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 376) {
+    return 1;
   }
+  return 3;
+}
 
-  clearTimeout(timeoutId);
-  if (!wrapper.matches(":hover")) autoPlay();
-  updateCounter();
+// Slider processing
+updateSlideCounter();
+
+function showCards(step) 
+{
+  for (let i = 0; i < slidesPerView; i++) {
+    let visibleCards = document.createElement('div');
+    visibleCards.classList.add('wrapper__mainWrap__participants__carousel__item__thumb');
+    visibleCards.appendChild(cardContainer[step + i].cloneNode(true));
+    carousel.appendChild(visibleCards);
+    carousel.scrollLeft = scrollLength * slidesPerView;
+  }
+}
+
+function navigateSlide(direction) 
+{
+  step = direction === 'next' ? (step + slidesPerView) : (step - slidesPerView + cardAmount);
+  step = step % cardAmount;
+  for (let i = 0; i < slidesPerView; i++) {
+    carousel.removeChild(carousel.children[0]);
+  }
+  showCards(step);
+  updateSlideCounter();
+}
+
+function updateSlideCounter() {
+  const slideCounterElement = document.querySelector('.wrapper__mainWrap__participants__nav__btns__counter')
+  const visibleSlideIndex = step + slidesPerView;
+  const totalSlides = cardAmount;
+  slideCounterElement.innerHTML = `<span style="opacity: 0.6">${visibleSlideIndex}</span>/${totalSlides}`;
 };
 
-const updateCounter = () => {
-  const totalImages = carouselChild.length;
-  const currentIndex = (Math.floor(carousel.scrollLeft / firstCardWidth) % totalImages) + 1;
-  counterElement.innerHTML = `<span style="opacity: 0.6">${currentIndex}</span>/${totalImages}`;
-};
+showCards(step);
 
-
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", infiniteScroll);
+//Auto scroll
+setInterval(() => {
+  navigateSlide('next');
+}, 4000);

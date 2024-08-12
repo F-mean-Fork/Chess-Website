@@ -1014,16 +1014,11 @@ h1 {
   gap: 94px;
   align-items: center;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
 }
 .wrapper__mainWrap__participants__carousel__item {
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
 }
 .wrapper__mainWrap__participants__carousel__item__thumb {
   margin-bottom: 28px;
@@ -1054,15 +1049,6 @@ h1 {
 .wrapper__mainWrap__participants__carousel__item__btn:hover, .wrapper__mainWrap__participants__carousel__item__btn:focus {
   color: rgb(255, 255, 255);
   background: rgb(48, 87, 162);
-}
-.wrapper__mainWrap__participants__carousel.no-transition {
-  scroll-behavior: auto;
-}
-.wrapper__mainWrap__participants__carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-  cursor: grab;
-  user-select: none;
 }
 .wrapper__mainWrap__participants__carousel::-webkit-scrollbar {
   display: none;
